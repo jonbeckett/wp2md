@@ -6,19 +6,19 @@ This python 3.x script will convert a Wordpress export file into a collection of
 
 Usage:
 
-`python wp2md.py <export file> <output folder>
+`python wp2md.py <export file> <output folder>`
 
 e.g.
 
-`python wp2md.py c:\temp\blog_export.xml c:\temp\output
+`python wp2md.py c:\temp\blog_export.xml c:\temp\output`
 
 
 ### Pre-Requisites
 
 The script makes use of both the markdownify, and unidecode modules, which should be installed with PIP as per the commands below:
 
-`pip install markdownify
-`pip install unidecode
+`pip install markdownify`
+`pip install unidecode`
 
 
 ### Output
