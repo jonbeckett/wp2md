@@ -34,5 +34,3 @@ Most common extended characters are replaced at run-time to their ascii equivale
 ### Notes
 
 I have not experimented with images and media within the blog export, and I have not played with removing all the Wordpress block comments - mostly because I did not need to for my own blog. If this is an issue for you, you might want to extend the code further and/or re-write the way the script deals with that content.
-
-Feel free to visit my blog backup at [https://github.com/jonbeckett/blog](https://github.com/jonbeckett/blog) to see what the output looks like.
