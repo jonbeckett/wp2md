@@ -85,8 +85,8 @@ for blog_post in blog_posts:
 		post_content = post_content.replace( u'\U0001f633', '')
 		post_content = post_content.replace( u'\u2018', u'\'')
 		post_content = post_content.replace( u'\u2019', u'\'')
-		post_content = post_content.replace( u'\u201c', u'\'')
-		post_content = post_content.replace( u'\u201d', u'\'')
+		post_content = post_content.replace( u'\u201c', u'\"')
+		post_content = post_content.replace( u'\u201d', u'\"')
 		post_content = post_content.replace( u'\u2013', '-')
 		post_content = post_content.replace( u'\u2026', '...')
 		post_content = post_content.replace( u'\u2033', '\'')
@@ -106,7 +106,7 @@ for blog_post in blog_posts:
 		# Sometimes markdownify leaves spaces at the start of lines - remove them
 		post_markdown = ''.join(line.lstrip(' \t') for line in post_markdown.splitlines(True))
 		
-		# get the post date from the start of the file name
+		# construct a post date in year-month-day format (use wp:post_date to retrieve the data)
 		post_year = post_date[0:4]
 		post_month = post_date[5:7]
 		post_day = post_date[8:10]
@@ -124,7 +124,7 @@ for blog_post in blog_posts:
 		post_filename = post_year + "-" + post_month + "-" + post_day + " " + post_title
 		
 		# create a year folder
-		post_parent_path = output_path + post_year
+		post_parent_path = os.path.join(output_path,post_year)
 		if not os.path.exists(post_parent_path):
 			os.makedirs(post_parent_path)
 			print("Creating Parent Path for " + post_year)
